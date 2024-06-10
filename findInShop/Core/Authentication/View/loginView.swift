@@ -11,6 +11,7 @@ struct loginView: View {
     
     @State private var email = ""
     @State private var password = ""
+    
     @EnvironmentObject var viewModel : AuthViewModel
     
     var body: some View {
@@ -56,14 +57,13 @@ struct loginView: View {
                 .disabled(!formIsValid)
                 .opacity(formIsValid ? 1.0 : 0.5)
                 
-                
                 Spacer()
                 
                 NavigationLink {
                     RegistrationView()
                         .navigationBarBackButtonHidden(true)
                 } label: {
-                    HStack(spacing: 3){
+                    HStack(spacing: 3) {
                         Text("Hesabiniz yok mu?")
                         Text("Kayit Olun")
                             .fontWeight(.bold)

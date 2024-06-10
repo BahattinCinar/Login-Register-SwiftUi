@@ -29,7 +29,7 @@ struct ProfileView: View {
                             Text(user.fullName)
                                 .fontWeight(.semibold)
                                 .padding(.top,4)
-                                
+
                             Text(user.email)
                                 .font(.footnote)
                                 .foregroundColor(.gray)
